@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tu dien</title>
+</head>
+<body>
+<input type="text" id="eng"/>
+<button type="button" onclick="trans()">dich</button>
+<p> <span id="result"></span></p>
+<script>
+    function trans() {
+        let str = document.getElementById("eng").value;
+        let ENG = ["hello", "bye", "loop", "reverse"];
+        let VIE = ["xin chao", "tam biet", "vong lap", "dao nguoc"];
+        let result = '';
+        for (let i = 0; i < ENG.length; i++) {
+            if (str === ENG[i]) {
+                result = VIE[i];
+            } else if (str === VIE[i]){
+                result = ENG[i];
+            } else {
+                result = " tao eo biet";
+            }
+        }
+        document.getElementById("result").innerHTML ="tieng viet la: "+ result;
+    }
+</script>
+
+<script>
+</script>
+</body>
+</html>
